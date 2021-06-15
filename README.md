@@ -132,3 +132,8 @@ Train:
 * Hits@100: 0.0441%
 
 The performances have increased significantly, but there is still considerable room for improvement. In this case, the goal was to develop an approach in a few hours, detect the right direction for selecting the correct model, and set the hyperparameters in about half a day. Moreover, I wanted to use almost real data (ogb-ddi includes more than 2 million edges), avoid toy data such as Zachary's karate club (78 edges in its base version).
+
+
+To improve the performance we can proceed in the following directions:
+* Extend the number of samples: the best situation would be not using samples, in order to process the entire graph dataset for each epoch. Alternatively, increasing the number of epoch is a good trade off.
+* Increase th number of parameters: compared to in-production models, which can include millions of parameters, the current model does not overcome the number of 70.000.
